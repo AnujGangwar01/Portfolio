@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import { Section } from "./Section";
 import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
+
+const EMAILJS_SERVICE_ID = "service_o7ih91k";
+const EMAILJS_TEMPLATE_ID = "template_bwrgkb9";
+const EMAILJS_PUBLIC_KEY = "FWI4GSi38Jl7Q873q";
 
 const links = [
   {
@@ -30,8 +35,35 @@ const links = [
   },
 ];
 
+type Status = "idle" | "sending" | "sent" | "error";
+
 export function Contact() {
-  const [sent, setSent] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState<string>("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
+      setStatus("sent");
+      formRef.current.reset();
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (err: any) {
+      console.error("EmailJS error:", err);
+      setErrorMsg(err?.text || err?.message || "Failed to send. Please try again.");
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 6000);
+    }
+  };
 
   return (
     <Section
@@ -100,15 +132,12 @@ export function Contact() {
 
         {/* RIGHT: Form */}
         <motion.form
+          ref={formRef}
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-            setTimeout(() => setSent(false), 4000);
-          }}
+          onSubmit={handleSubmit}
           className="lg:col-span-3 rounded-2xl border border-border bg-card/60 shadow-card overflow-hidden relative"
         >
           <div
@@ -131,6 +160,7 @@ export function Contact() {
                   Name
                 </label>
                 <input
+                  name="from_name"
                   required
                   className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
                   placeholder="Your name"
@@ -141,6 +171,7 @@ export function Contact() {
                   Email
                 </label>
                 <input
+                  name="reply_to"
                   type="email"
                   required
                   className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
@@ -153,6 +184,7 @@ export function Contact() {
                 Subject
               </label>
               <input
+                name="subject"
                 className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
                 placeholder="What's this about?"
               />
@@ -162,6 +194,7 @@ export function Contact() {
                 Message
               </label>
               <textarea
+                name="message"
                 required
                 rows={5}
                 className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 resize-none transition-all"
@@ -170,12 +203,14 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="group w-full inline-flex items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold text-primary-foreground glow transition-all hover:-translate-y-0.5"
+              disabled={status === "sending"}
+              className="group w-full inline-flex items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold text-primary-foreground glow transition-all hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed"
               style={{ background: "var(--gradient-primary)" }}
             >
-              {sent ? (
-                <>✓ Message ready — opens in your client</>
-              ) : (
+              {status === "sending" && <>Sending…</>}
+              {status === "sent" && <>✓ Message sent — thanks!</>}
+              {status === "error" && <>✕ {errorMsg || "Something went wrong"}</>}
+              {status === "idle" && (
                 <>
                   Send Message
                   <span className="transition-transform group-hover:translate-x-1">→</span>
