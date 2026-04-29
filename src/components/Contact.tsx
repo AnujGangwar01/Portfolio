@@ -13,8 +13,8 @@ const links = [
   {
     icon: FaLinkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/anuj-gangwar",
-    href: "https://linkedin.com/in/anuj-gangwar",
+    value: "linkedin.com/in/anuj-gangwar-47b8a0320/",
+    href: "https://www.linkedin.com/in/anuj-gangwar-47b8a0320/",
   },
   {
     icon: FaGithub,
