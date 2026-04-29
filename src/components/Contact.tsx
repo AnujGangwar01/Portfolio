@@ -4,51 +4,101 @@ import { Section } from "./Section";
 import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 
 const links = [
-  { icon: FaEnvelope, label: "anuj.gangwar.geophysics@gmail.com", href: "mailto:anuj.gangwar.geophysics@gmail.com" },
-  { icon: FaLinkedin, label: "linkedin.com/in/anuj-gangwar", href: "https://linkedin.com/in/anuj-gangwar" },
-  { icon: FaGithub, label: "github.com/anuj-gangwar", href: "https://github.com/anuj-gangwar" },
-  { icon: FaMapMarkerAlt, label: "IIT (ISM) Dhanbad, Jharkhand, India", href: "#" },
+  {
+    icon: FaEnvelope,
+    label: "Email",
+    value: "anuj.gangwar.geophysics@gmail.com",
+    href: "mailto:anuj.gangwar.geophysics@gmail.com",
+  },
+  {
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/anuj-gangwar",
+    href: "https://linkedin.com/in/anuj-gangwar",
+  },
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    value: "github.com/anuj-gangwar",
+    href: "https://github.com/anuj-gangwar",
+  },
+  {
+    icon: FaMapMarkerAlt,
+    label: "Location",
+    value: "IIT (ISM) Dhanbad, Jharkhand, India",
+    href: "#",
+  },
 ];
 
 export function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <Section id="contact" eyebrow="Contact" title={<>Let's build <span className="text-gradient">something</span></>}>
+    <Section
+      id="contact"
+      eyebrow="// contact.open"
+      title={
+        <>
+          Let's build <span className="text-gradient">something</span>
+        </>
+      }
+    >
       <p className="text-center text-muted-foreground max-w-2xl mx-auto -mt-8 mb-12">
         Open to collaborations, opportunities, and technical discussions across software,
         scientific computing, and applied geophysics.
       </p>
 
-      <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        {/* LEFT: Contact channels */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="space-y-3"
+          className="lg:col-span-2 space-y-3"
         >
+          <div className="rounded-2xl border border-border bg-card/60 p-5 shadow-card">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-[oklch(0.65_0.2_150)] opacity-75 animate-ping" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[oklch(0.65_0.2_150)]" />
+              </span>
+              <span className="text-xs font-mono text-[oklch(0.55_0.18_150)]">
+                AVAILABLE
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Currently accepting messages and new opportunities.
+            </p>
+          </div>
+
           {links.map((l) => (
             <a
               key={l.label}
               href={l.href}
               target={l.href.startsWith("http") ? "_blank" : undefined}
               rel="noreferrer"
-              className="flex items-center gap-4 rounded-xl border border-border bg-card/60 p-4 hover:border-accent/60 hover:bg-card transition-colors group"
+              className="flex items-center gap-4 rounded-xl border border-border bg-card/60 p-4 hover:border-accent/60 hover:bg-card transition-all group hover:-translate-y-0.5"
             >
               <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center text-primary-foreground"
+                className="w-11 h-11 shrink-0 rounded-lg flex items-center justify-center text-primary-foreground"
                 style={{ background: "var(--gradient-primary)" }}
               >
                 <l.icon />
               </div>
-              <span className="text-sm text-muted-foreground group-hover:text-foreground break-all">
-                {l.label}
-              </span>
+              <div className="min-w-0">
+                <div className="text-[10px] font-mono uppercase tracking-widest text-accent">
+                  {l.label}
+                </div>
+                <div className="text-sm text-muted-foreground group-hover:text-foreground break-all">
+                  {l.value}
+                </div>
+              </div>
             </a>
           ))}
         </motion.div>
 
+        {/* RIGHT: Form */}
         <motion.form
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -59,41 +109,80 @@ export function Contact() {
             setSent(true);
             setTimeout(() => setSent(false), 4000);
           }}
-          className="rounded-2xl border border-border bg-card/60 p-6 space-y-4 shadow-card"
+          className="lg:col-span-3 rounded-2xl border border-border bg-card/60 shadow-card overflow-hidden relative"
         >
-          <div>
-            <label className="text-xs font-mono uppercase tracking-widest text-accent">Name</label>
-            <input
-              required
-              className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none transition-colors"
-              placeholder="Your name"
-            />
-          </div>
-          <div>
-            <label className="text-xs font-mono uppercase tracking-widest text-accent">Email</label>
-            <input
-              type="email"
-              required
-              className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none transition-colors"
-              placeholder="you@email.com"
-            />
-          </div>
-          <div>
-            <label className="text-xs font-mono uppercase tracking-widest text-accent">Message</label>
-            <textarea
-              required
-              rows={4}
-              className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none transition-colors resize-none"
-              placeholder="Tell me about your project or idea..."
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full rounded-lg py-3 text-sm font-semibold text-primary-foreground glow transition-transform hover:-translate-y-0.5"
+          <div
+            className="absolute inset-x-0 top-0 h-px opacity-60"
             style={{ background: "var(--gradient-primary)" }}
-          >
-            {sent ? "✓ Message ready — opens in your client" : "Send Message"}
-          </button>
+          />
+          <div className="flex items-center gap-1.5 px-5 py-3 border-b border-border/60 bg-card/40">
+            <span className="w-2.5 h-2.5 rounded-full bg-destructive/70" />
+            <span className="w-2.5 h-2.5 rounded-full bg-accent/70" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[oklch(0.78_0.2_165)]/70" />
+            <span className="ml-3 text-[10px] font-mono text-muted-foreground">
+              new_message.txt
+            </span>
+          </div>
+
+          <div className="p-6 space-y-4">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="text-[10px] font-mono uppercase tracking-widest text-accent">
+                  Name
+                </label>
+                <input
+                  required
+                  className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-mono uppercase tracking-widest text-accent">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+                  placeholder="you@email.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="text-[10px] font-mono uppercase tracking-widest text-accent">
+                Subject
+              </label>
+              <input
+                className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
+                placeholder="What's this about?"
+              />
+            </div>
+            <div>
+              <label className="text-[10px] font-mono uppercase tracking-widest text-accent">
+                Message
+              </label>
+              <textarea
+                required
+                rows={5}
+                className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 resize-none transition-all"
+                placeholder="Tell me about your project or idea..."
+              />
+            </div>
+            <button
+              type="submit"
+              className="group w-full inline-flex items-center justify-center gap-2 rounded-lg py-3 text-sm font-semibold text-primary-foreground glow transition-all hover:-translate-y-0.5"
+              style={{ background: "var(--gradient-primary)" }}
+            >
+              {sent ? (
+                <>✓ Message ready — opens in your client</>
+              ) : (
+                <>
+                  Send Message
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </>
+              )}
+            </button>
+          </div>
         </motion.form>
       </div>
     </Section>
