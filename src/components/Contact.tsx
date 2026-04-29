@@ -162,6 +162,7 @@ export function Contact() {
                 </label>
                 <input
                   name="from_name"
+
                   required
                   className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
                   placeholder="Your name"
