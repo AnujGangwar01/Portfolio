@@ -173,7 +173,7 @@ export function Contact() {
                   Email
                 </label>
                 <input
-                  name="reply_to"
+                  name="from_email"
                   type="email"
                   required
                   className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
