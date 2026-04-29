@@ -81,21 +81,20 @@ export function Navbar() {
 
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
+          <button
+            aria-label="Toggle menu"
+            className="p-2 text-foreground"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
+              )}
+            </svg>
+          </button>
         </div>
-
-        <button
-          aria-label="Toggle menu"
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
-            )}
-          </svg>
-        </button>
       </nav>
 
       {open && (
