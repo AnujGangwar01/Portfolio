@@ -173,15 +173,29 @@ export function Hero() {
           <div className="relative w-full max-w-md">
             {/* Portrait */}
             <div className="relative animate-float mx-auto w-64 h-64 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem]">
+              {/* Outer glow */}
               <div
-                className="absolute -inset-6 rounded-full blur-3xl opacity-60"
+                className="absolute -inset-8 rounded-full blur-3xl opacity-50"
                 style={{ background: "var(--gradient-primary)" }}
               />
-              {/* Rotating ring */}
-              <div className="absolute -inset-4 rounded-full border border-accent/20 animate-[spin_18s_linear_infinite]" />
-              <div className="absolute -inset-2 rounded-full border border-accent/30" />
+              {/* Conic rotating ring */}
               <div
-                className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/40 glow"
+                className="absolute -inset-3 rounded-full opacity-70 animate-[spin_14s_linear_infinite]"
+                style={{
+                  background:
+                    "conic-gradient(from 0deg, transparent 0%, var(--accent) 25%, transparent 50%, var(--primary) 75%, transparent 100%)",
+                  WebkitMask:
+                    "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px))",
+                  mask: "radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px))",
+                }}
+                aria-hidden="true"
+              />
+              {/* Static thin ring */}
+              <div className="absolute -inset-1 rounded-full border border-accent/40" />
+
+              {/* Image */}
+              <div
+                className="relative w-full h-full rounded-full overflow-hidden border-2 border-background shadow-card"
                 style={{ background: "var(--gradient-primary)" }}
               >
                 <img
@@ -191,14 +205,28 @@ export function Hero() {
                   height={1024}
                   className="w-full h-full object-cover"
                 />
-                {/* Scanline */}
+                {/* Subtle inner gradient for depth */}
                 <div
-                  className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-40 rounded-full"
+                  className="absolute inset-0 pointer-events-none rounded-full"
                   style={{
                     background:
-                      "repeating-linear-gradient(0deg, transparent 0 3px, oklch(1 0 0 / 0.04) 3px 4px)",
+                      "radial-gradient(circle at 30% 20%, transparent 50%, color-mix(in oklab, var(--primary) 35%, transparent) 100%)",
                   }}
                 />
+                {/* Scanline */}
+                <div
+                  className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-30 rounded-full"
+                  style={{
+                    background:
+                      "repeating-linear-gradient(0deg, transparent 0 3px, oklch(1 0 0 / 0.06) 3px 4px)",
+                  }}
+                />
+              </div>
+
+              {/* Orbit dots */}
+              <div className="absolute inset-0 animate-[spin_22s_linear_infinite]" aria-hidden="true">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-accent shadow-[0_0_12px_var(--accent)]" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary" />
               </div>
 
               {/* Floating chips */}
