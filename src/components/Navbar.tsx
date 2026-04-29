@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -67,27 +68,33 @@ export function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center rounded-full px-5 py-2 text-sm font-medium text-primary-foreground"
-          style={{ background: "var(--gradient-primary)" }}
-        >
-          Let's Talk
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="inline-flex items-center rounded-full px-5 py-2 text-sm font-medium text-primary-foreground"
+            style={{ background: "var(--gradient-primary)" }}
+          >
+            Let's Talk
+          </a>
+        </div>
 
-        <button
-          aria-label="Toggle menu"
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
-            )}
-          </svg>
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            aria-label="Toggle menu"
+            className="p-2 text-foreground"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {open && (
