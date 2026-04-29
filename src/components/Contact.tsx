@@ -7,8 +7,8 @@ const links = [
   {
     icon: FaEnvelope,
     label: "Email",
-    value: "anuj.gangwar.geophysics@gmail.com",
-    href: "mailto:anuj.gangwar.geophysics@gmail.com",
+    value: "gangwar7819@gmail.com",
+    href: "mailto:gangwar7819@gmail.com",
   },
   {
     icon: FaLinkedin,
