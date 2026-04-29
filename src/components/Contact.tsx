@@ -19,8 +19,8 @@ const links = [
   {
     icon: FaGithub,
     label: "GitHub",
-    value: "github.com/anuj-gangwar",
-    href: "https://github.com/anuj-gangwar",
+    value: "github.com/AnujGangwar01",
+    href: "https://github.com/AnujGangwar01",
   },
   {
     icon: FaMapMarkerAlt,
