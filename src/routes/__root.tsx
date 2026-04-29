@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Anuj Gangwar" },
+      { name: "description", content: "Prefinal Student at IIT ISM Dhanbad" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Anuj Gangwar" },
+      { property: "og:description", content: "Prefinal Student at IIT ISM Dhanbad" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Anuj Gangwar" },
+      { name: "twitter:description", content: "Prefinal Student at IIT ISM Dhanbad" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/63cec019-578f-44d9-8913-3f092af77cd4/id-preview-a4808ebc--00b7c0ef-b803-44c7-93b9-ad2f98515ccf.lovable.app-1777499280242.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/63cec019-578f-44d9-8913-3f092af77cd4/id-preview-a4808ebc--00b7c0ef-b803-44c7-93b9-ad2f98515ccf.lovable.app-1777499280242.png" },
     ],
     links: [
       {
