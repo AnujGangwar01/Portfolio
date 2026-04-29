@@ -54,6 +54,7 @@ export function Contact() {
         formRef.current,
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
+
       setStatus("sent");
       formRef.current.reset();
       setTimeout(() => setStatus("idle"), 5000);
