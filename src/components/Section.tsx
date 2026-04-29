@@ -23,15 +23,19 @@ export function Section({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="mb-14 text-center"
+            className="mb-16 text-center"
           >
             {eyebrow && (
-              <p className="font-mono text-xs tracking-[0.3em] uppercase text-accent mb-3">
-                {eyebrow}
-              </p>
+              <div className="inline-flex items-center gap-2 mb-4">
+                <span className="h-px w-8 bg-gradient-to-r from-transparent to-accent" />
+                <p className="font-mono text-[11px] tracking-[0.32em] uppercase text-accent">
+                  {eyebrow}
+                </p>
+                <span className="h-px w-8 bg-gradient-to-l from-transparent to-accent" />
+              </div>
             )}
             {title && (
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 {title}
               </h2>
             )}

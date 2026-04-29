@@ -33,7 +33,15 @@ export function ParticleField() {
       }));
     };
 
+    const getColors = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      return isDark
+        ? { line: "140, 220, 255", dot: "160, 230, 255", dotA: 0.85, lineA: 0.28 }
+        : { line: "30, 90, 180", dot: "40, 100, 200", dotA: 0.55, lineA: 0.18 };
+    };
+
     const tick = () => {
+      const { line, dot, dotA, lineA } = getColors();
       ctx.clearRect(0, 0, w, h);
       for (const p of pts) {
         p.x += p.vx;
@@ -49,7 +57,7 @@ export function ParticleField() {
           const d2 = dx * dx + dy * dy;
           if (d2 < 120 * 120) {
             const a = 1 - Math.sqrt(d2) / 120;
-            ctx.strokeStyle = `rgba(120, 200, 255, ${a * 0.25})`;
+            ctx.strokeStyle = `rgba(${line}, ${a * lineA})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
@@ -60,7 +68,7 @@ export function ParticleField() {
       }
       // dots
       for (const p of pts) {
-        ctx.fillStyle = "rgba(140, 220, 255, 0.8)";
+        ctx.fillStyle = `rgba(${dot}, ${dotA})`;
         ctx.beginPath();
         ctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
         ctx.fill();
