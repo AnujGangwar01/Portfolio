@@ -155,6 +155,7 @@ export function Contact() {
           </div>
 
           <div className="p-6 space-y-4">
+            <input type="hidden" name="to_name" value="Anuj" />
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-[10px] font-mono uppercase tracking-widest text-accent">
@@ -162,12 +163,12 @@ export function Contact() {
                 </label>
                 <input
                   name="from_name"
-
                   required
                   className="mt-1.5 w-full rounded-lg bg-background/60 border border-border px-4 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all"
                   placeholder="Your name"
                 />
               </div>
+
               <div>
                 <label className="text-[10px] font-mono uppercase tracking-widest text-accent">
                   Email
