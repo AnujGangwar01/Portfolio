@@ -174,13 +174,14 @@ export function Hero() {
             {/* Portrait */}
             <div className="relative animate-float mx-auto w-64 h-64 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem]">
               <div
-                className="absolute -inset-6 rounded-[2rem] blur-3xl opacity-60"
+                className="absolute -inset-6 rounded-full blur-3xl opacity-60"
                 style={{ background: "var(--gradient-primary)" }}
               />
               {/* Rotating ring */}
-              <div className="absolute -inset-4 rounded-[2rem] border border-accent/20 animate-[spin_18s_linear_infinite]" />
+              <div className="absolute -inset-4 rounded-full border border-accent/20 animate-[spin_18s_linear_infinite]" />
+              <div className="absolute -inset-2 rounded-full border border-accent/30" />
               <div
-                className="relative w-full h-full rounded-[2rem] overflow-hidden border border-accent/40 glow"
+                className="relative w-full h-full rounded-full overflow-hidden border-2 border-accent/40 glow"
                 style={{ background: "var(--gradient-primary)" }}
               >
                 <img
@@ -192,7 +193,7 @@ export function Hero() {
                 />
                 {/* Scanline */}
                 <div
-                  className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-40"
+                  className="absolute inset-0 pointer-events-none mix-blend-overlay opacity-40 rounded-full"
                   style={{
                     background:
                       "repeating-linear-gradient(0deg, transparent 0 3px, oklch(1 0 0 / 0.04) 3px 4px)",
