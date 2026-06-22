@@ -29,7 +29,7 @@ export function Footer() {
               <span className="text-foreground">.dev</span>
             </div>
             <p className="text-sm text-muted-foreground mt-2 max-w-xs">
-              Bridging Geophysics and Software Engineering through data-driven solutions.
+              Full Stack Developer &amp; Competitive Programmer · IIT (ISM) Dhanbad.
             </p>
           </div>
 
