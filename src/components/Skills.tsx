@@ -1,38 +1,42 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { FaCode, FaBrain, FaUsers } from "react-icons/fa";
+import { FaCode, FaServer, FaTools } from "react-icons/fa";
 
 const groups = [
   {
-    title: "Programming",
+    title: "Languages",
     icon: FaCode,
+    badge: "core",
+    items: [
+      { name: "C++", level: 90 },
+      { name: "JavaScript", level: 88 },
+      { name: "Python", level: 82 },
+      { name: "C", level: 80 },
+      { name: "HTML / CSS", level: 90 },
+    ],
+  },
+  {
+    title: "Full Stack",
+    icon: FaServer,
     badge: "stack",
     items: [
-      { name: "Python", level: 90 },
-      { name: "NumPy", level: 85 },
-      { name: "Matplotlib", level: 80 },
-      { name: "lasio", level: 78 },
+      { name: "React", level: 88 },
+      { name: "Tailwind CSS", level: 90 },
+      { name: "Node.js / Express", level: 82 },
+      { name: "MongoDB", level: 78 },
+      { name: "MySQL", level: 75 },
     ],
   },
   {
-    title: "Core Areas",
-    icon: FaBrain,
-    badge: "domain",
+    title: "CP & Tools",
+    icon: FaTools,
+    badge: "edge",
     items: [
-      { name: "Data Analysis", level: 88 },
-      { name: "Scientific Computing", level: 82 },
-      { name: "Algorithmic Thinking", level: 85 },
-      { name: "Workflow Automation", level: 78 },
-    ],
-  },
-  {
-    title: "Soft Skills",
-    icon: FaUsers,
-    badge: "human",
-    items: [
-      { name: "Analytical Thinking", level: 92 },
-      { name: "Technical Coordination", level: 80 },
-      { name: "Communication", level: 85 },
+      { name: "DSA in C++", level: 88 },
+      { name: "Dynamic Programming", level: 80 },
+      { name: "Graphs & Trees", level: 82 },
+      { name: "Git & GitHub", level: 90 },
+      { name: "Linux · VS Code · Postman", level: 85 },
     ],
   },
 ];
