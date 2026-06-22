@@ -4,20 +4,21 @@ import { ParticleField } from "./ParticleField";
 import heroImg from "@/assets/anuj-hero.jpg";
 
 const taglines = [
-  "Bridging Geophysics & Software Engineering",
-  "Through Data-Driven Solutions",
-  "Python · Computational Science · Algorithms",
+  "Full Stack Developer & Competitive Programmer",
+  "Building with the MERN stack · Solving with C++",
+  "DSA · System Design · Real-world Projects",
 ];
 
 const codeLines = [
-  { c: "text-muted-foreground", t: "// anuj.gangwar — profile.py" },
-  { c: "text-accent", t: "class Engineer:" },
-  { c: "text-foreground/80", t: "    name = 'Anuj Gangwar'" },
-  { c: "text-foreground/80", t: "    role = 'Geophysicist + Dev'" },
-  { c: "text-foreground/80", t: "    stack = ['Python', 'C++', 'NumPy']" },
-  { c: "text-foreground/80", t: "    focus = 'Subsurface Intelligence'" },
-  { c: "text-accent", t: "    def build(self):" },
-  { c: "text-[oklch(0.78_0.2_165)]", t: "        return insight(data)" },
+  { c: "text-muted-foreground", t: "// anuj.gangwar — profile.ts" },
+  { c: "text-accent", t: "const dev = {" },
+  { c: "text-foreground/80", t: "  name: 'Anuj Gangwar'," },
+  { c: "text-foreground/80", t: "  role: 'Full Stack Developer'," },
+  { c: "text-foreground/80", t: "  stack: ['React', 'Node', 'MongoDB']," },
+  { c: "text-foreground/80", t: "  cp: ['C++', 'Codeforces', 'LeetCode']," },
+  { c: "text-accent", t: "  ship: () =>" },
+  { c: "text-[oklch(0.78_0.2_165)]", t: "    build(ideas).deploy()," },
+  { c: "text-accent", t: "};" },
 ];
 
 export function Hero() {
