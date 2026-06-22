@@ -57,7 +57,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/anuj-gangwar"
+                href="https://github.com/AnujGangwar01"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -66,7 +66,7 @@ export function Footer() {
                 <FaGithub />
               </a>
               <a
-                href="https://linkedin.com/in/anuj-gangwar"
+                href="https://www.linkedin.com/in/anuj-gangwar-47b8a0320/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -75,7 +75,16 @@ export function Footer() {
                 <FaLinkedin />
               </a>
               <a
-                href="mailto:anuj.gangwar.geophysics@gmail.com"
+                href="https://codeforces.com/profile/Anuj_37"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Codeforces"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
+              >
+                <FaCode />
+              </a>
+              <a
+                href="mailto:agangwar7819@gmail.com"
                 aria-label="Email"
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
               >
