@@ -237,8 +237,8 @@ export function Hero() {
                 transition={{ delay: 0.6 }}
                 className="absolute -left-4 sm:-left-10 top-6 glass rounded-xl px-3.5 py-2.5 border border-border shadow-card"
               >
-                <div className="text-[10px] font-mono text-accent">~/python</div>
-                <div className="text-xs sm:text-sm font-medium">NumPy · Matplotlib</div>
+                <div className="text-[10px] font-mono text-accent">~/frontend</div>
+                <div className="text-xs sm:text-sm font-medium">React · Tailwind</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -246,8 +246,8 @@ export function Hero() {
                 transition={{ delay: 0.7 }}
                 className="absolute -right-2 sm:-right-8 bottom-10 glass rounded-xl px-3.5 py-2.5 border border-border shadow-card"
               >
-                <div className="text-[10px] font-mono text-accent">geophysics.lasio</div>
-                <div className="text-xs sm:text-sm font-medium">Borehole · Seismic</div>
+                <div className="text-[10px] font-mono text-accent">~/backend</div>
+                <div className="text-xs sm:text-sm font-medium">Node · Express · Mongo</div>
               </motion.div>
             </div>
 
