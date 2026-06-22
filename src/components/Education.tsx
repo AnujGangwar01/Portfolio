@@ -3,11 +3,12 @@ import { Section } from "./Section";
 import { FaGraduationCap } from "react-icons/fa";
 
 const courses = [
-  "Mathematics & Computational Methods",
-  "Geophysical Signal Processing",
-  "Seismic Data Interpretation",
-  "Programming & Numerical Analysis",
-  "Earth Sciences & Field Methods",
+  "Data Structures & Algorithms",
+  "Object-Oriented Programming (C++)",
+  "Web Development (MERN)",
+  "Database Management Systems",
+  "Operating Systems",
+  "Mathematics & Numerical Methods",
 ];
 
 export function Education() {
