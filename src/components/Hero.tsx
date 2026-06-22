@@ -99,8 +99,8 @@ export function Hero() {
             I'm <span className="text-gradient">Anuj</span>
             <span className="text-foreground">.</span>
             <br />
-            <span className="text-foreground/90">I build with</span>{" "}
-            <span className="text-gradient-neon">data</span>
+            <span className="text-foreground/90">I build for the</span>{" "}
+            <span className="text-gradient-neon">web</span>
             <span className="text-foreground">.</span>
           </h1>
 
@@ -110,10 +110,10 @@ export function Hero() {
           </p>
 
           <p className="mt-6 text-muted-foreground max-w-2xl leading-relaxed text-base md:text-lg">
-            Integrated M.Tech in Applied Geophysics at{" "}
-            <span className="text-foreground font-medium">IIT (ISM) Dhanbad</span>. I turn raw
-            subsurface signals into clean Python pipelines, scientific visualisations, and
-            algorithms that actually answer questions.
+            Prefinal year student at{" "}
+            <span className="text-foreground font-medium">IIT (ISM) Dhanbad</span>, shipping full
+            stack apps with the MERN stack and sharpening algorithmic thinking through daily
+            competitive programming on Codeforces, LeetCode, and CodeChef.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3 sm:gap-4">
