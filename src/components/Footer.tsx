@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaCode } from "react-icons/fa";
 
 const navLinks = [
   { label: "About", href: "#about" },
