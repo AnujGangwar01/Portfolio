@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaCode } from "react-icons/fa";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -29,7 +29,7 @@ export function Footer() {
               <span className="text-foreground">.dev</span>
             </div>
             <p className="text-sm text-muted-foreground mt-2 max-w-xs">
-              Bridging Geophysics and Software Engineering through data-driven solutions.
+              Full Stack Developer &amp; Competitive Programmer · IIT (ISM) Dhanbad.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/anuj-gangwar"
+                href="https://github.com/AnujGangwar01"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -66,7 +66,7 @@ export function Footer() {
                 <FaGithub />
               </a>
               <a
-                href="https://linkedin.com/in/anuj-gangwar"
+                href="https://www.linkedin.com/in/anuj-gangwar-47b8a0320/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -75,7 +75,16 @@ export function Footer() {
                 <FaLinkedin />
               </a>
               <a
-                href="mailto:anuj.gangwar.geophysics@gmail.com"
+                href="https://codeforces.com/profile/Anuj_37"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Codeforces"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
+              >
+                <FaCode />
+              </a>
+              <a
+                href="mailto:agangwar7819@gmail.com"
                 aria-label="Email"
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-accent hover:border-accent transition-colors"
               >

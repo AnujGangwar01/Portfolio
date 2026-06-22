@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Section } from "./Section";
-import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 
 const EMAILJS_SERVICE_ID = "service_o7ih91k";
 const EMAILJS_TEMPLATE_ID = "template_bwrgkb9";
@@ -12,13 +12,13 @@ const links = [
   {
     icon: FaEnvelope,
     label: "Email",
-    value: "gangwar7819@gmail.com",
-    href: "mailto:gangwar7819@gmail.com",
+    value: "agangwar7819@gmail.com",
+    href: "mailto:agangwar7819@gmail.com",
   },
   {
     icon: FaLinkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/anuj-gangwar-47b8a0320/",
+    value: "linkedin.com/in/anuj-gangwar-47b8a0320",
     href: "https://www.linkedin.com/in/anuj-gangwar-47b8a0320/",
   },
   {
@@ -28,10 +28,10 @@ const links = [
     href: "https://github.com/AnujGangwar01",
   },
   {
-    icon: FaMapMarkerAlt,
-    label: "Location",
-    value: "IIT (ISM) Dhanbad, Jharkhand, India",
-    href: "#",
+    icon: FaCode,
+    label: "Codeforces",
+    value: "codeforces.com/profile/Anuj_37",
+    href: "https://codeforces.com/profile/Anuj_37",
   },
 ];
 

@@ -4,20 +4,21 @@ import { ParticleField } from "./ParticleField";
 import heroImg from "@/assets/anuj-hero.jpg";
 
 const taglines = [
-  "Bridging Geophysics & Software Engineering",
-  "Through Data-Driven Solutions",
-  "Python · Computational Science · Algorithms",
+  "Full Stack Developer & Competitive Programmer",
+  "Building with the MERN stack · Solving with C++",
+  "DSA · System Design · Real-world Projects",
 ];
 
 const codeLines = [
-  { c: "text-muted-foreground", t: "// anuj.gangwar — profile.py" },
-  { c: "text-accent", t: "class Engineer:" },
-  { c: "text-foreground/80", t: "    name = 'Anuj Gangwar'" },
-  { c: "text-foreground/80", t: "    role = 'Geophysicist + Dev'" },
-  { c: "text-foreground/80", t: "    stack = ['Python', 'C++', 'NumPy']" },
-  { c: "text-foreground/80", t: "    focus = 'Subsurface Intelligence'" },
-  { c: "text-accent", t: "    def build(self):" },
-  { c: "text-[oklch(0.78_0.2_165)]", t: "        return insight(data)" },
+  { c: "text-muted-foreground", t: "// anuj.gangwar — profile.ts" },
+  { c: "text-accent", t: "const dev = {" },
+  { c: "text-foreground/80", t: "  name: 'Anuj Gangwar'," },
+  { c: "text-foreground/80", t: "  role: 'Full Stack Developer'," },
+  { c: "text-foreground/80", t: "  stack: ['React', 'Node', 'MongoDB']," },
+  { c: "text-foreground/80", t: "  cp: ['C++', 'Codeforces', 'LeetCode']," },
+  { c: "text-accent", t: "  ship: () =>" },
+  { c: "text-[oklch(0.78_0.2_165)]", t: "    build(ideas).deploy()," },
+  { c: "text-accent", t: "};" },
 ];
 
 export function Hero() {
@@ -98,8 +99,8 @@ export function Hero() {
             I'm <span className="text-gradient">Anuj</span>
             <span className="text-foreground">.</span>
             <br />
-            <span className="text-foreground/90">I build with</span>{" "}
-            <span className="text-gradient-neon">data</span>
+            <span className="text-foreground/90">I build for the</span>{" "}
+            <span className="text-gradient-neon">web</span>
             <span className="text-foreground">.</span>
           </h1>
 
@@ -109,10 +110,10 @@ export function Hero() {
           </p>
 
           <p className="mt-6 text-muted-foreground max-w-2xl leading-relaxed text-base md:text-lg">
-            Integrated M.Tech in Applied Geophysics at{" "}
-            <span className="text-foreground font-medium">IIT (ISM) Dhanbad</span>. I turn raw
-            subsurface signals into clean Python pipelines, scientific visualisations, and
-            algorithms that actually answer questions.
+            Prefinal year student at{" "}
+            <span className="text-foreground font-medium">IIT (ISM) Dhanbad</span>, shipping full
+            stack apps with the MERN stack and sharpening algorithmic thinking through daily
+            competitive programming on Codeforces, LeetCode, and CodeChef.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3 sm:gap-4">
@@ -141,9 +142,9 @@ export function Hero() {
           {/* Stats strip */}
           <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
             {[
-              { v: "2024–28", l: "IIT (ISM) Dhanbad" },
-              { v: "CSIR", l: "NGRI Research Intern" },
-              { v: "Python", l: "Scientific Stack" },
+              { v: "MERN", l: "Full Stack" },
+              { v: "C++", l: "Competitive Coder" },
+              { v: "IIT", l: "(ISM) Dhanbad" },
             ].map((s, idx) => (
               <motion.div
                 key={s.l}
@@ -236,8 +237,8 @@ export function Hero() {
                 transition={{ delay: 0.6 }}
                 className="absolute -left-4 sm:-left-10 top-6 glass rounded-xl px-3.5 py-2.5 border border-border shadow-card"
               >
-                <div className="text-[10px] font-mono text-accent">~/python</div>
-                <div className="text-xs sm:text-sm font-medium">NumPy · Matplotlib</div>
+                <div className="text-[10px] font-mono text-accent">~/frontend</div>
+                <div className="text-xs sm:text-sm font-medium">React · Tailwind</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -245,8 +246,8 @@ export function Hero() {
                 transition={{ delay: 0.7 }}
                 className="absolute -right-2 sm:-right-8 bottom-10 glass rounded-xl px-3.5 py-2.5 border border-border shadow-card"
               >
-                <div className="text-[10px] font-mono text-accent">geophysics.lasio</div>
-                <div className="text-xs sm:text-sm font-medium">Borehole · Seismic</div>
+                <div className="text-[10px] font-mono text-accent">~/backend</div>
+                <div className="text-xs sm:text-sm font-medium">Node · Express · Mongo</div>
               </motion.div>
             </div>
 
@@ -262,7 +263,7 @@ export function Hero() {
                 <span className="w-2.5 h-2.5 rounded-full bg-accent/70" />
                 <span className="w-2.5 h-2.5 rounded-full bg-[oklch(0.78_0.2_165)]/70" />
                 <span className="ml-3 text-[10px] font-mono text-muted-foreground">
-                  profile.py — anuj@ism
+                  profile.ts — anuj@ism
                 </span>
               </div>
               <pre className="p-4 text-[11px] sm:text-xs font-mono leading-relaxed overflow-hidden">

@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { FaPython, FaChartLine, FaCode, FaGlobe } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaCode, FaTrophy } from "react-icons/fa";
 
 const pillars = [
-  { icon: FaPython, label: "Python", desc: "Idiomatic, performance-aware code", tag: "lang" },
-  { icon: FaChartLine, label: "Data Analysis", desc: "Raw signals → insight", tag: "core" },
-  { icon: FaCode, label: "Algorithms", desc: "Efficiency-first thinking", tag: "craft" },
-  { icon: FaGlobe, label: "Geophysics", desc: "Earth science meets software", tag: "domain" },
+  { icon: FaReact, label: "Frontend", desc: "React, Tailwind, modern UI", tag: "ui" },
+  { icon: FaNodeJs, label: "Backend", desc: "Node, Express, REST APIs", tag: "api" },
+  { icon: FaCode, label: "DSA in C++", desc: "Clean, efficient solutions", tag: "core" },
+  { icon: FaTrophy, label: "Competitive", desc: "Codeforces · LeetCode · CC", tag: "cp" },
 ];
 
 const facts = [
   { k: "location", v: "Dhanbad, IN" },
   { k: "program", v: "Int. M.Tech '24–'28" },
-  { k: "focus", v: "Subsurface + Code" },
-  { k: "open_to", v: "Internships · Research" },
+  { k: "focus", v: "Full Stack + DSA" },
+  { k: "open_to", v: "SDE Internships '26" },
 ];
 
 export function About() {
@@ -23,8 +23,8 @@ export function About() {
       eyebrow="// about_me"
       title={
         <>
-          Where <span className="text-gradient">science</span> meets{" "}
-          <span className="text-gradient-neon">software</span>
+          Where <span className="text-gradient">code</span> meets{" "}
+          <span className="text-gradient-neon">curiosity</span>
         </>
       }
     >
@@ -39,21 +39,21 @@ export function About() {
         >
           <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
             <p>
-              I'm an Integrated M.Tech student in{" "}
-              <span className="text-foreground font-medium">Applied Geophysics</span> at IIT (ISM)
-              Dhanbad, with a deep interest in{" "}
-              <span className="text-accent">Software Engineering</span> and{" "}
-              <span className="text-accent">Computational Science</span>.
+              I'm a prefinal year student at{" "}
+              <span className="text-foreground font-medium">IIT (ISM) Dhanbad</span>, focused on{" "}
+              <span className="text-accent">Full Stack Development</span> and{" "}
+              <span className="text-accent">Competitive Programming</span>.
             </p>
             <p>
-              My work sits at the intersection of scientific exploration and software craft —
-              designing efficient algorithms, processing large scientific datasets, and building
-              tools that translate complex subsurface data into clear, actionable visualizations.
+              I build production-ready web apps end-to-end with the{" "}
+              <span className="text-foreground font-medium">MERN stack</span> — designing clean
+              UIs in React, shipping REST APIs in Node/Express, and modeling data in MongoDB. On
+              the side, I grind algorithms in C++ on Codeforces, LeetCode, and CodeChef.
             </p>
             <p>
-              I care about{" "}
-              <span className="text-foreground font-medium">algorithmic efficiency</span>, clean
-              code, and using software as a lens for understanding the natural world.
+              I care about <span className="text-foreground font-medium">clean code</span>,
+              algorithmic efficiency, and turning ideas into things people can actually use.
+              Currently preparing for SDE internships and placements.
             </p>
           </div>
 

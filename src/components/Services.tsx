@@ -1,28 +1,28 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { FaLaptopCode, FaDatabase, FaHandshake } from "react-icons/fa";
+import { FaLaptopCode, FaServer, FaTrophy } from "react-icons/fa";
 
 const items = [
   {
     icon: FaLaptopCode,
-    title: "Software Development",
-    desc: "Building Python tools, automation scripts, and clean computational pipelines.",
+    title: "Full Stack Web Apps",
+    desc: "End-to-end MERN apps — responsive React frontends, REST APIs, authentication, and deployment.",
     tag: "01",
-    items: ["Python Tools", "Automation", "Pipelines"],
+    items: ["React", "Tailwind", "Auth"],
   },
   {
-    icon: FaDatabase,
-    title: "Scientific Data Analysis",
-    desc: "Turning raw geophysical and scientific data into clear, reproducible insight.",
+    icon: FaServer,
+    title: "Backend & APIs",
+    desc: "Node.js / Express services with MongoDB or MySQL, clean schemas, and well-structured endpoints.",
     tag: "02",
-    items: ["LAS Parsing", "Visualization", "Reporting"],
+    items: ["Node.js", "Express", "MongoDB"],
   },
   {
-    icon: FaHandshake,
-    title: "Research Collaboration",
-    desc: "Open to academic and industry projects in geophysics and computational science.",
+    icon: FaTrophy,
+    title: "DSA & Problem Solving",
+    desc: "Strong C++ competitive programming background — open to algorithm-heavy projects and interview prep collaborations.",
     tag: "03",
-    items: ["Internships", "Open Source", "Co-authorship"],
+    items: ["C++", "DSA", "System Design"],
   },
 ];
 
