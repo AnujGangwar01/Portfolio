@@ -263,7 +263,7 @@ export function Hero() {
                 <span className="w-2.5 h-2.5 rounded-full bg-accent/70" />
                 <span className="w-2.5 h-2.5 rounded-full bg-[oklch(0.78_0.2_165)]/70" />
                 <span className="ml-3 text-[10px] font-mono text-muted-foreground">
-                  profile.py — anuj@ism
+                  profile.ts — anuj@ism
                 </span>
               </div>
               <pre className="p-4 text-[11px] sm:text-xs font-mono leading-relaxed overflow-hidden">
