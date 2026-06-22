@@ -142,9 +142,9 @@ export function Hero() {
           {/* Stats strip */}
           <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
             {[
-              { v: "2024–28", l: "IIT (ISM) Dhanbad" },
-              { v: "CSIR", l: "NGRI Research Intern" },
-              { v: "Python", l: "Scientific Stack" },
+              { v: "MERN", l: "Full Stack" },
+              { v: "C++", l: "Competitive Coder" },
+              { v: "IIT", l: "(ISM) Dhanbad" },
             ].map((s, idx) => (
               <motion.div
                 key={s.l}
