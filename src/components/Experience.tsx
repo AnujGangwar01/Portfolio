@@ -1,18 +1,30 @@
 import { motion } from "framer-motion";
 import { Section } from "./Section";
-import { FaFlask, FaUsers, FaCode } from "react-icons/fa";
+import { FaTrophy, FaUsers, FaCode } from "react-icons/fa";
 
 const items = [
   {
-    icon: FaFlask,
-    role: "Research Intern",
-    org: "CSIR – National Geophysical Research Institute (NGRI)",
-    period: "Internship",
-    tag: "research",
+    icon: FaCode,
+    role: "Full Stack Projects",
+    org: "Self-driven · MERN Stack",
+    period: "Ongoing",
+    tag: "build",
     points: [
-      "Hands-on experience with seismic data acquisition workflows",
-      "Exposure to industry practices in geophysical research",
-      "Worked alongside senior scientists on field data interpretation",
+      "Built InterviewIQ — an AI mock-interview platform on React, Node, Express, MongoDB with Clerk auth and Gemini AI",
+      "Shipped this portfolio in React + TypeScript + Tailwind with a working EmailJS-powered contact form",
+      "Comfortable owning features end-to-end: UI, API, database, and deploy",
+    ],
+  },
+  {
+    icon: FaTrophy,
+    role: "Competitive Programmer",
+    org: "Codeforces · LeetCode · CodeChef",
+    period: "Active",
+    tag: "cp",
+    points: [
+      "Regular contests on Codeforces (handle: Anuj_37), LeetCode and CodeChef",
+      "Focus areas: Dynamic Programming, Graphs, Trees, Binary Search, Greedy",
+      "Daily C++ practice to sharpen DSA and problem-solving speed",
     ],
   },
   {
@@ -25,18 +37,6 @@ const items = [
       "Coordinated professional outreach with alumni and recruiters",
       "Managed communication for the upcoming placement season",
       "Built and maintained an active recruiter–alumni network",
-    ],
-  },
-  {
-    icon: FaCode,
-    role: "Academic & Development Work",
-    org: "Self-driven Projects",
-    period: "Ongoing",
-    tag: "build",
-    points: [
-      "Python-based pipelines for scientific data processing",
-      "Seismic waveform analysis and borehole log visualization",
-      "Focus on workflow automation and algorithmic efficiency",
     ],
   },
 ];
